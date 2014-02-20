@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 留言
+title: Leave me a message:)
 comments: yes
-thread: 616
+thread: comment-index
 ---
 
-来了，就留下你的足迹吧。
+欢迎讨论各种问题~~
