@@ -1,0 +1,13 @@
+markdown: redcarpet
+permalink: /:title/
+url: http://gluckzhang.github.io
+name: GluckZhang
+author: GluckZhang
+email: zhanglong3030@outlook.com
+duoshuo: gluckzhang
+weibo: gluckzhang
+github: gluckzhang
+pygments: true
+safe: true
+paginate: 20
+about: "wait a miniute"
