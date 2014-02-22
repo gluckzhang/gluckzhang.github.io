@@ -40,6 +40,9 @@ a:hover {
 a img {
     border: none;
 }
+img {
+    max-width: 100%;
+}
 p {
     margin-bottom: 9px;
 }
