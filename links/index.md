@@ -8,7 +8,8 @@ thread: links-index
 ##Technique
 > [简明 Python 教程](http://sebug.net/paper/python/index.html "简明 Python 教程")  
 > [深入 Python 3](http://sebug.net/paper/books/dive-into-python3/index.html "深入 Python 3")  
-> [Python 入门指南](http://www.pythondoc.com/pythontutorial3/index.html "Python 入门指南")
+> [Python 入门指南](http://www.pythondoc.com/pythontutorial3/index.html "Python 入门指南")  
+> [Linux C编程一站式学习](http://learn.akae.cn/media/index.html "Linux C编程一站式学习")
 
 ##Tools
 > [CoffeeScript](http://coffeescript.org/ "CoffeeScript")  
