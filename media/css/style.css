@@ -11,10 +11,10 @@
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
 @import url(http://fonts.googleapis.com/css?family=Cuprum);
 @font-face {
-	font-family: 'EBGaramond-Regular';
+	font-family: 'Gafata-Regular.ttf';
 	font-style: 13px;
 	font-weight: normal;
-	src: local('EBGaramond-Regular'), url('../fonts/EBGaramond-Regular.ttf') format('truetype');
+	src: local('Gafata-Regular.ttf'), url('../fonts/Gafata-Regular.ttf') format('truetype');
 }
 *{padding:0;margin: 0;border:none;outline:none;}
 p{padding:.5em 0;}
