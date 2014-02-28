@@ -96,13 +96,13 @@ Singleton模式主要作用是保证在Java应用程序中，一个Class只有�
 
 ```
 public class Singleton {
-　　private static Singleton instance = null;
-　　public static synchronized Singleton getInstance() {
-　　　　//第一次使用时生成类的实例
-　　　　if (instance == null)
-　　　　　　this.instance ＝ new Singleton();
-　　　　return instance;
-　　}
+	private static Singleton instance = null;
+	public static synchronized Singleton getInstance() {
+		//第一次使用时生成类的实例
+		if (instance == null)
+			this.instance ＝ new Singleton();
+		return instance;
+	}
 }
 ```
 
