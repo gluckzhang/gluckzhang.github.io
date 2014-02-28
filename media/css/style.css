@@ -11,10 +11,10 @@
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
 @import url(http://fonts.googleapis.com/css?family=Cuprum);
 @font-face {
-	font-family: 'Gafata-Regular.ttf';
+	font-family: 'Gafata-Regular';
 	font-style: 13px;
 	font-weight: normal;
-	src: local('Gafata-Regular.ttf'), url('../fonts/Gafata-Regular.ttf') format('truetype');
+	src: local('Gafata-Regular'), url('../fonts/Gafata-Regular.ttf') format('truetype');
 }
 *{padding:0;margin: 0;border:none;outline:none;}
 p{padding:.5em 0;}
@@ -39,7 +39,7 @@ header{padding:.5em 0;border-bottom: 1px solid #cccccc;}
 nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-12em;width:9em;text-align:right;}
 nav a{display:block;padding:.7em 1em;color:#000000;}
 nav a:hover{background-color:#ff0000;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
-.post{padding:.5em 0em;}
+.post{font-family: Arial, sans-serif; padding:.5em 0em;}
 embed,object,iframe{display:block;margin:4px auto;}
 .gist{font-size: 12px;line-height:1.6;}
 
