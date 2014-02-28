@@ -51,3 +51,62 @@ wait是Object类的方法，对此对象调用wait方法导致本线程放弃对
 方法的重写（Overriding）和重载（Overloading）是Java多态性的不同表现。  
 重写是父类与子类之间多态性的一种表现，重载是一个类中多态性的一种表现。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写。子类的对象使用这个方法时，将调用子类中的定义，对它而言，父类中的定义如同被"屏蔽"了一样；如果在一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型，则称为方法的重载。Overloaded的方法是可以改变返回值的类型。
 
+###error和exception的区别
+error表示不是不可能恢复，但是很困难的情况下的一种严重问题，比如说内存溢出，不能指望程序来处理这样的情况。  
+exception表示一种设计或实现问题，如果程序运行正常，应该不会发生这种情况。
+
+###abstract class和interface的区别
+声明方法的存在而不去实现它的类被叫做抽象类（abstract class），它用于创建一个体现某些基本行为的类，并为该类声明方法，但不必在该类中进行实现的情况。不能创建abstract类的实例，然而可以创建一个变量，其类型是一个抽象类，并让它指向具体子类的一个实例。不能有抽象构造函数或抽象静态方法。Abstract类的子类为它们父类中的所有抽象方法提供实现，否则它们也是抽象类。  
+接口（interface）是抽象类的变体。在接口中所有方法都是抽象的，没有一个有程序体。多继承性可通过实现接口而获得。接口只可以定义static final成员变量。接口的实现与子类相似，除了该实现类不能从接口定义中继承行为。当类实现某接口时，它定义（即将程序体给予）所有这种接口的方法。由于有抽象类，它允许使用接口名作为引用变量的类型，通常的动态联编将生效。引用可以转换到接口类型或从接口类型转换，instanceof 运算符可以用来确定某对象的类是否实现了接口。
+
+###Static Nested Class和Inner Class的区别
+Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化；而通常的内部类需要在外部类实例化后才能实例化。
+
+###JSP中动态INCLUDE与静态INCLUDE的区别
+动态INCLUDE用jsp:include动作实现。
+
+	<jsp:include page="included.jsp" flush="true" />
+
+它总是会检查所含文件中的变化，适合用于包含动态页面，并且可以带参数。  
+静态INCLUDE用include伪码实现，不会检查所含文件的变化，适用于包含静态页面。
+
+	<%@ include file="included.htm" %>
+
+###String s = new String("xyz");创建了几个String Object?
+创建两个String对象。
+
+###列举常见的runtime exception
+BufferOverflowException, ClassCastException, EmptyStackException, IllegalArgumentException, IllegalStateException, IndexOutOfBoundsException, NullPointerException, SystemException, UndeclaredThrowableException……
+
+###接口是否可继承接口？抽象类是否可实现(implements)接口？抽象类是否可继承实体类(concrete class)？
+接口可以继承接口；抽象类可以实现接口；抽象类可以继承实体类，但前提是实体类必须有明确的构造函数。
+
+###数组、String有没有length()方法？
+数组没有length()方法，有length属性；String有length()方法。
+
+###try {}里有一个return语句，那么紧跟在这个try后的finally {}代码会不会被执行，什么时候被执行？
+会执行，在return前执行。
+
+###当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这是值传递还是引用传递？
+是值传递。Java编程语言只有值传递参数，当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的内容可以在被调用的方法中改变，但对象的引用是永远不会改变的。
+
+###设计一个Singleton模式的类
+Singleton模式主要作用是保证在Java应用程序中，一个Class只有一个实例存在。  
+一种形式: 定义一个类，它的构造函数为private的，有一个private static的该类变量，在类初始化时实例化，通过一个public的getInstance方法获取对它的引用，继而调用其中的方法。
+
+```
+public class Singleton {
+　　private static Singleton instance = null;
+　　public static synchronized Singleton getInstance() {
+　　　　//第一次使用时生成类的实例
+　　　　if (instance == null)
+　　　　　　this.instance ＝ new Singleton();
+　　　　return instance;
+　　}
+}
+```
+
+另一种形式: 定义一个类，它的构造函数为private的，所有方法为static的。  
+一般认为第一种形式要更加安全些
+
+
